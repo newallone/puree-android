@@ -25,8 +25,7 @@ public class PureeConfigurator {
         PureeConfiguration conf = new PureeConfiguration.Builder(context)
                 .executor(Executors.newScheduledThreadPool(1)) // optional
                 .register(ClickLog.class, new OutDisplay().withFilters(addEventTimeFilter))
-                .register(ClickLog.class,
-                        new OutBufferedLogcat().withFilters(addEventTimeFilter, samplingFilter))
+                .register(ClickLog.class, new OutBufferedLogcat().withFilters(addEventTimeFilter, samplingFilter))
                 .register(PvLog.class, new OutLogcat().withFilters(addEventTimeFilter))
                 .register(BenchmarkLog.class, new OutBufferedVoid().withFilters(addEventTimeFilter))
                 .build();

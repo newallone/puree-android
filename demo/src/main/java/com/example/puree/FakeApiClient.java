@@ -5,7 +5,8 @@ import com.google.gson.JsonArray;
 import android.util.Log;
 
 public class FakeApiClient {
-    private static final String TAG = FakeApiClient.class.getSimpleName();
+    //private static final String TAG = FakeApiClient.class.getSimpleName();
+    private static final String TAG = "swlee FakeApiClient";
 
     public interface Callback {
 

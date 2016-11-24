@@ -16,7 +16,8 @@ import javax.annotation.ParametersAreNonnullByDefault;
 public class OutBufferedLogcat extends PureeBufferedOutput {
     public static final String TYPE = "buffered_logcat";
 
-    private static final String TAG = OutBufferedLogcat.class.getSimpleName();
+    //private static final String TAG = OutBufferedLogcat.class.getSimpleName();
+    private static final String TAG = "swlee";
 
     @Override
     public String type() {
@@ -34,6 +35,7 @@ public class OutBufferedLogcat extends PureeBufferedOutput {
     @Override
     public void emit(JsonArray jsonLogs, AsyncResult asyncResult) {
         Log.d(TAG, jsonLogs.toString());
+        Log.d(TAG, "swlee");
         asyncResult.success();
     }
 }

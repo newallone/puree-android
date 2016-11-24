@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Puree.send(new ClickLog("MainActivity", "BUTTON 1"));
+                //Puree.send(new BenchmarkLog("MainActivity", "BUTTON 1"));
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
